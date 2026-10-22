@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nurbly Build Challenge</title>
   <meta name="description" content="A six-month virtual CAD design competition. Design one complete drone in six monthly stages, every file versioned in a public Nurbly repo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
   <script>
     // Edit these links. Every element with a matching data-link attribute picks them up.
@@ -19,50 +22,71 @@
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="#">
-      <img src="assets/logo.svg" alt="Nurbly logo" width="40" height="40">
-      <span>Nurbly Build Challenge</span>
+      <img src="assets/logo.svg" alt="Nurbly logo" width="32" height="32">
+      <span>Nurbly <span class="muted">Build Challenge</span></span>
     </a>
-    <a class="button" data-link="register" href="#">Register</a>
+    <a class="btn btn-primary" data-link="register" href="#">Register</a>
   </div>
 </header>
 
-<main class="wrap">
-
-  <section id="pitch">
-    <h1>Design a drone in six months. In public.</h1>
-    <p>
-      The Nurbly Build Challenge is a six-month virtual CAD competition. Each month opens a new stage.
-      By the end, your team has designed one complete drone. Every file lives in a public Nurbly repo,
-      so the whole design history is on the record. Teams can be any size. Teams of three or fewer use
-      Nurbly free. Teams of four or more need a paid Nurbly plan for the run.
+<section class="hero" id="pitch">
+  <div class="wrap">
+    <span class="badge">Virtual CAD competition <span class="mono">nbc-2027</span></span>
+    <h1>Design a drone in six months. <span class="grad">In public.</span></h1>
+    <p class="lead">
+      Six monthly stages. One complete drone. Every file versioned in a public Nurbly repo,
+      so your whole design history is on the record. Teams can be any size. Teams of three
+      or fewer use Nurbly free. Teams of four or more need a paid Nurbly plan for the run.
     </p>
-  </section>
+    <div class="actions">
+      <a class="btn btn-primary btn-lg" data-link="register" href="#">Register your team</a>
+      <a class="btn btn-outline btn-lg" href="#stages">See the stages</a>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
 
   <section id="dates">
     <h2>Key dates</h2>
     <!-- EDIT: placeholder dates. Stage deadlines fall on the last Sunday of each month. -->
-    <ul class="dates">
-      <li><strong>Registration opens</strong> <span>1 Dec 2026</span></li>
-      <li><strong>Stage 1 opens</strong> <span>1 Jan 2027</span></li>
-      <li><strong>Stage deadlines</strong> <span>Last Sunday of each month, 23:59 UTC</span></li>
-      <li><strong>Final deadline</strong> <span>27 Jun 2027, 23:59 UTC</span></li>
-    </ul>
+    <div class="grid grid-4">
+      <div class="card">
+        <p class="label">Registration opens</p>
+        <p class="value">1 Dec 2026</p>
+      </div>
+      <div class="card">
+        <p class="label">Stage 1 opens</p>
+        <p class="value">1 Jan 2027</p>
+      </div>
+      <div class="card">
+        <p class="label">Stage deadlines</p>
+        <p class="value">Last Sunday of each month</p>
+        <p class="sub mono">23:59 UTC</p>
+      </div>
+      <div class="card">
+        <p class="label">Final deadline</p>
+        <p class="value">27 Jun 2027</p>
+        <p class="sub mono">23:59 UTC</p>
+      </div>
+    </div>
   </section>
 
   <section id="stages">
     <h2>Stages</h2>
-    <div class="table-scroll">
+    <p class="section-lead">One stage per month. Each one builds on the last.</p>
+    <div class="card table-card">
       <table>
         <thead>
           <tr><th>Stage</th><th>Month</th><th>Deliverable</th></tr>
         </thead>
         <tbody>
-          <tr><td>1. Airframe</td><td>Jan</td><td>Arms, body, landing gear and motor mounts as STEP. Printable or machinable.</td></tr>
-          <tr><td>2. Electronics layout</td><td>Feb</td><td>Flight controller, ESC and battery mounts, cable routing. PCB outline if custom.</td></tr>
-          <tr><td>3. Propulsion</td><td>Mar</td><td>Motor selection and prop guards. Thrust math documented in the repo.</td></tr>
-          <tr><td>4. Control and sensing</td><td>Apr</td><td>FC mount, camera or sensor gimbal, antenna placement.</td></tr>
-          <tr><td>5. Integration</td><td>May</td><td>Full assembly, interference check, mass budget, BOM.</td></tr>
-          <tr><td>6. Final</td><td>Jun</td><td>Documented build, optional physical build photos, release tag.</td></tr>
+          <tr><td><span class="tag mono">stage-1</span> Airframe</td><td>Jan</td><td>Arms, body, landing gear and motor mounts as STEP. Printable or machinable.</td></tr>
+          <tr><td><span class="tag mono">stage-2</span> Electronics layout</td><td>Feb</td><td>Flight controller, ESC and battery mounts, cable routing. PCB outline if custom.</td></tr>
+          <tr><td><span class="tag mono">stage-3</span> Propulsion</td><td>Mar</td><td>Motor selection and prop guards. Thrust math documented in the repo.</td></tr>
+          <tr><td><span class="tag mono">stage-4</span> Control and sensing</td><td>Apr</td><td>FC mount, camera or sensor gimbal, antenna placement.</td></tr>
+          <tr><td><span class="tag mono">stage-5</span> Integration</td><td>May</td><td>Full assembly, interference check, mass budget, BOM.</td></tr>
+          <tr><td><span class="tag mono">stage-6</span> Final</td><td>Jun</td><td>Documented build, optional physical build photos, release tag.</td></tr>
         </tbody>
       </table>
     </div>
@@ -70,41 +94,62 @@
 
   <section id="judging">
     <h2>How it is judged</h2>
-    <ul class="weights">
-      <li><span>Engineering quality</span> <strong>35%</strong></li>
-      <li><span>Design process</span> <strong>25%</strong></li>
-      <li><span>Integration with prior stages</span> <strong>20%</strong></li>
-      <li><span>Documentation</span> <strong>15%</strong></li>
-      <li><span>Presentation</span> <strong>5%</strong></li>
-    </ul>
-    <p>Commit history is judged, so a single deadline-day commit scores below a month of small commits.</p>
+    <div class="card">
+      <ul class="weights">
+        <li><span>Engineering quality</span><strong>35%</strong><i style="--w:35%"></i></li>
+        <li><span>Design process</span><strong>25%</strong><i style="--w:25%"></i></li>
+        <li><span>Integration with prior stages</span><strong>20%</strong><i style="--w:20%"></i></li>
+        <li><span>Documentation</span><strong>15%</strong><i style="--w:15%"></i></li>
+        <li><span>Presentation</span><strong>5%</strong><i style="--w:5%"></i></li>
+      </ul>
+    </div>
+    <p class="note">Commit history is judged, so a single deadline-day commit scores below a month of small commits.</p>
   </section>
 
   <section id="prizes">
     <h2>Prizes</h2>
     <!-- EDIT: replace every TBD amount. -->
-    <ul class="prizes">
-      <li class="grand"><strong>Grand prize</strong> <span class="tbd">$TBD</span></li>
-      <li><strong>Stage prizes</strong> <span><span class="tbd">$TBD</span> for each of the six stages</span></li>
-      <li><strong>Best commit history</strong> <span class="tbd">$TBD</span></li>
-      <li><strong>Best documentation</strong> <span class="tbd">$TBD</span></li>
-      <li><strong>Best physical build</strong> <span class="tbd">$TBD</span></li>
-    </ul>
+    <div class="grid grid-3">
+      <div class="card card-grand">
+        <p class="label">Grand prize</p>
+        <p class="amount"><span class="tbd">$TBD</span></p>
+        <p class="sub">Best complete drone across all six stages.</p>
+      </div>
+      <div class="card">
+        <p class="label">Stage prizes</p>
+        <p class="amount"><span class="tbd">$TBD</span></p>
+        <p class="sub">For each of the six stages.</p>
+      </div>
+      <div class="card">
+        <p class="label">Best commit history</p>
+        <p class="amount"><span class="tbd">$TBD</span></p>
+      </div>
+      <div class="card">
+        <p class="label">Best documentation</p>
+        <p class="amount"><span class="tbd">$TBD</span></p>
+      </div>
+      <div class="card">
+        <p class="label">Best physical build</p>
+        <p class="amount"><span class="tbd">$TBD</span></p>
+      </div>
+    </div>
   </section>
 
   <section id="rules">
     <h2>Rules summary</h2>
-    <ul>
-      <li>One public Nurbly repo per team, tagged <code>nbc-2027</code>.</li>
-      <li>All models as STEP.</li>
-      <li>Tag each stage <code>stage-N</code>.</li>
-      <li>At least 10 commits per stage.</li>
-      <li>Any CAD tool.</li>
-      <li>Late joiners welcome from any stage.</li>
-      <li>Participants keep their IP.</li>
-      <li>You must be 18 or older.</li>
-    </ul>
-    <p><a data-link="rules" href="#">Read the full rules</a></p>
+    <div class="card">
+      <ul class="checks">
+        <li>One public Nurbly repo per team, tagged <code>nbc-2027</code>.</li>
+        <li>All models as STEP.</li>
+        <li>Tag each stage <code>stage-N</code>.</li>
+        <li>At least 10 commits per stage.</li>
+        <li>Any CAD tool.</li>
+        <li>Late joiners welcome from any stage.</li>
+        <li>Participants keep their IP.</li>
+        <li>You must be 18 or older.</li>
+      </ul>
+    </div>
+    <p class="note"><a data-link="rules" href="#">Read the full rules</a></p>
   </section>
 
   <section id="sponsors">
@@ -122,35 +167,42 @@
 
   <section id="faq">
     <h2>FAQ</h2>
-    <details>
-      <summary>Do I need to build the drone physically?</summary>
-      <p>No. A physical build is optional. It only earns a bonus in stage 6.</p>
-    </details>
-    <details>
-      <summary>What CAD tool do I need?</summary>
-      <p>Any tool that exports STEP.</p>
-    </details>
-    <details>
-      <summary>What does Nurbly cost?</summary>
-      <p>Nothing for teams of three or fewer. Teams of four or more need a paid plan for the run.</p>
-    </details>
-    <details>
-      <summary>Can I join late?</summary>
-      <p>Yes. You can join from any stage.</p>
-    </details>
-    <details>
-      <summary>Where do I ask questions?</summary>
-      <p>On our <a data-link="discord" href="#">Discord</a>.</p>
-    </details>
+    <div class="faq">
+      <details>
+        <summary>Do I need to build the drone physically?</summary>
+        <p>No. A physical build is optional. It only earns a bonus in stage 6.</p>
+      </details>
+      <details>
+        <summary>What CAD tool do I need?</summary>
+        <p>Any tool that exports STEP.</p>
+      </details>
+      <details>
+        <summary>What does Nurbly cost?</summary>
+        <p>Nothing for teams of three or fewer. Teams of four or more need a paid plan for the run.</p>
+      </details>
+      <details>
+        <summary>Can I join late?</summary>
+        <p>Yes. You can join from any stage.</p>
+      </details>
+      <details>
+        <summary>Where do I ask questions?</summary>
+        <p>On our <a data-link="discord" href="#">Discord</a>.</p>
+      </details>
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <a class="button" data-link="register" href="#">Register</a>
-    <p>Contact us at <a data-link="email" href="#"></a></p>
-    <p>Run by <a href="https://nurbly.com">Nurbly</a></p>
+    <h2>Ready to build?</h2>
+    <p class="muted">Six stages. One drone. Every commit on the record.</p>
+    <a class="btn btn-primary btn-lg" data-link="register" href="#">Register your team</a>
+    <p class="footer-meta">
+      Contact <a data-link="email" href="#"></a>
+      <span class="dot"></span>
+      Run by <a href="https://nurbly.com">Nurbly</a>
+    </p>
   </div>
 </footer>
 

@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="6" fill="#f0f0f0" stroke="#999" stroke-dasharray="4 3"/><text x="20" y="24" font-family="sans-serif" font-size="9" text-anchor="middle" fill="#666">LOGO</text></svg>
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>nurbly icon (white)</title>
+<desc>The nurbly mark in white for dark backgrounds: a bold lowercase n with a sweeping spline arch.</desc>
+<g transform="translate(10 7.2) scale(1.4)">
+<path d="M28 85 L28 43 C28 11 72 11 72 43 L72 85" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
