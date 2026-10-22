@@ -13,7 +13,7 @@
     // Edit these links. Every element with a matching data-link attribute picks them up.
     const REGISTER_URL = "https://forms.gle/REPLACE_ME";
     const RULES_URL = "#rules";
-    const DISCORD_URL = "https://discord.gg/REPLACE_ME";
+    const DISCORD_URL = ""; // Leave empty to hide the Discord mention.
     const CONTACT_EMAIL = "contact@example.com";
   </script>
 </head>
@@ -35,8 +35,8 @@
     <h1>Design a drone in six months. <span class="grad">In public.</span></h1>
     <p class="lead">
       Six monthly stages. One complete drone. Every file versioned in a public Nurbly repo,
-      so your whole design history is on the record. Teams can be any size. Teams of three
-      or fewer use Nurbly free. Teams of four or more need a paid Nurbly plan for the run.
+      so your whole design history is on the record. Teams can be any size, and Nurbly is
+      free for every team.
     </p>
     <div class="actions">
       <a class="btn btn-primary btn-lg" data-link="register" href="#">Register your team</a>
@@ -174,11 +174,25 @@
       </details>
       <details>
         <summary>What CAD tool do I need?</summary>
-        <p>Any tool that exports STEP.</p>
+        <p>Any tool that exports STEP. Nurbly shows STEP files in 3D right in the browser and
+        compares revisions face by face, so judges can see how your design changed. Native files,
+        like SolidWorks parts, can live in the repo too. Only STEP gets the 3D view.</p>
+      </details>
+      <details>
+        <summary>Do I need to know Git?</summary>
+        <p>No. Nurbly runs on Git, but you never type a git command. Upload files in the browser,
+        or use the free <code>nrb</code> command line tool and desktop companion, which offers to
+        check in changes from your system tray.</p>
       </details>
       <details>
         <summary>What does Nurbly cost?</summary>
-        <p>Nothing for teams of three or fewer. Teams of four or more need a paid plan for the run.</p>
+        <p>Nothing. Challenge repos are public, and public repos on Nurbly are free with no limit
+        on collaborators. A team of any size can compete on free accounts.</p>
+      </details>
+      <details>
+        <summary>How big can our repo be?</summary>
+        <p>A free Nurbly repo holds up to 500 MiB. That is plenty for STEP files. Keep build photos
+        and videos compressed.</p>
       </details>
       <details>
         <summary>Can I join late?</summary>
@@ -186,7 +200,8 @@
       </details>
       <details>
         <summary>Where do I ask questions?</summary>
-        <p>On our <a data-link="discord" href="#">Discord</a>.</p>
+        <p>Email us at <a data-link="email" href="#"></a>.<span data-needs="discord"> You can also
+        ask on our <a data-link="discord" href="#">Discord</a>.</span></p>
       </details>
     </div>
   </section>
@@ -210,6 +225,7 @@
   const links = { register: REGISTER_URL, rules: RULES_URL, discord: DISCORD_URL, email: "mailto:" + CONTACT_EMAIL };
   document.querySelectorAll("[data-link]").forEach(a => { a.href = links[a.dataset.link]; });
   document.querySelectorAll('[data-link="email"]').forEach(a => { a.textContent = CONTACT_EMAIL; });
+  if (!DISCORD_URL) document.querySelectorAll('[data-needs="discord"]').forEach(el => el.remove());
 </script>
 </body>
 </html>
