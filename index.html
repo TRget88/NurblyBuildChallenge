@@ -220,6 +220,7 @@
     <h2>Ready to build?</h2>
     <p class="muted">Six stages. One drone. Every commit on the record.</p>
     <a class="btn btn-primary btn-lg" data-link="register" href="#">Register your team</a>
+    <p class="footer-sponsor">Want to sponsor the challenge? <a data-link="sponsor" href="#">Get in touch</a>.</p>
     <p class="footer-meta">
       Contact <a data-link="email" href="#"></a>
       <span class="dot"></span>
@@ -229,7 +230,8 @@
 </footer>
 
 <script>
-  const links = { register: REGISTER_URL, rules: RULES_URL, discord: DISCORD_URL, email: "mailto:" + CONTACT_EMAIL };
+  const links = { register: REGISTER_URL, rules: RULES_URL, discord: DISCORD_URL, email: "mailto:" + CONTACT_EMAIL,
+    sponsor: "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Sponsoring the Nurbly Build Challenge") };
   document.querySelectorAll("[data-link]").forEach(a => { a.href = links[a.dataset.link]; });
   document.querySelectorAll('[data-link="email"]').forEach(a => { a.textContent = CONTACT_EMAIL; });
   if (!DISCORD_URL) document.querySelectorAll('[data-needs="discord"]').forEach(el => el.remove());

@@ -323,8 +323,9 @@ details p { color: var(--text-2); margin-top: 0.6rem; }
 }
 .site-footer h2 { font-size: 1.9rem; margin-bottom: 0.5rem; }
 .site-footer .btn { margin-top: 1.5rem; }
+.footer-sponsor { margin-top: 2.5rem; color: var(--text-2); }
 .footer-meta {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   color: var(--muted);
   font-size: 0.9rem;
   display: flex;
