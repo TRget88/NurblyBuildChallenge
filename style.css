@@ -373,7 +373,6 @@ section[id] { scroll-margin-top: 1rem; }
   .hero h1 { font-size: 3.5rem; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .card-grand { grid-column: 1 / -1; }
   .checks { grid-template-columns: 1fr 1fr; }
   .toc ol { grid-template-columns: 1fr 1fr; }
 }
@@ -381,4 +380,6 @@ section[id] { scroll-margin-top: 1rem; }
 @media (min-width: 860px) {
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(4, 1fr); }
+  /* Cash prizes share the first row; the four sponsor prizes fill the second */
+  .card-cash { grid-column: span 2; }
 }
