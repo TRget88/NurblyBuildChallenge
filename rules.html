@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon-white.svg" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <title>Official Rules · Nurbly Build Challenge</title>
+  <meta name="description" content="Official rules of the Nurbly Build Challenge: eligibility, entry, stages, judging, prizes, intellectual property and conduct.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="./">
+      <img src="assets/logo.svg" alt="Nurbly logo" width="32" height="32">
+      <span>Nurbly <span class="muted">Build Challenge</span></span>
+    </a>
+    <a class="btn btn-primary" data-link="register" href="#">Register</a>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="back"><a href="./">&larr; Back to the challenge</a></p>
+    <h1>Official Rules</h1>
+    <!-- EDIT: update this date whenever the rules change. -->
+    <p class="muted">Last updated 28 October 2026</p>
+  </div>
+</section>
+
+<main class="wrap rules">
+
+  <nav class="card toc" aria-label="Contents">
+    <p class="label">Contents</p>
+    <ol>
+      <li><a href="#definitions">Definitions</a></li>
+      <li><a href="#s1">1. Organizer and eligibility</a></li>
+      <li><a href="#s2">2. How to enter</a></li>
+      <li><a href="#s3">3. Schedule and submissions</a></li>
+      <li><a href="#s4">4. Judging</a></li>
+      <li><a href="#s5">5. Prizes</a></li>
+      <li><a href="#s6">6. Intellectual property</a></li>
+      <li><a href="#s7">7. Conduct, safety and disqualification</a></li>
+      <li><a href="#s8">8. General terms</a></li>
+      <li><a href="#conduct">Code of conduct</a></li>
+    </ol>
+  </nav>
+
+  <section id="definitions">
+    <h2>Definitions</h2>
+    <p>In these rules the following words have the meanings given. Words defined in the Nurbly Terms of Service and not defined here have the meaning given there.</p>
+    <div class="card table-card">
+      <table class="defs">
+        <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Challenge</td><td>The Nurbly Build Challenge described in these rules</td></tr>
+          <tr><td>Organizer</td><td>Vagabond Ventures LLC, the Georgia limited liability company that operates Nurbly</td></tr>
+          <tr><td>Nurbly</td><td>The hosted service at nurbly.com, including its git endpoints, as defined in the Nurbly Terms of Service</td></tr>
+          <tr><td>Terms of Service</td><td>The Nurbly Terms of Service published at <a href="https://nurbly.com/terms">nurbly.com/terms</a>, as amended from time to time</td></tr>
+          <tr><td>Team</td><td>One or more individuals registered together through the registration form. A team of one is a team</td></tr>
+          <tr><td>Team lead</td><td>The individual who submits the registration form for a team and is the team's point of contact and prize recipient</td></tr>
+          <tr><td>Entry or entry repository</td><td>The single public repository on Nurbly that a team registers as its submission to the Challenge</td></tr>
+          <tr><td>Repository</td><td>A version-controlled collection of files held on Nurbly, with its full change history</td></tr>
+          <tr><td>Commit</td><td>A recorded change to a repository, identified by a unique hash, with an author, a date and a message</td></tr>
+          <tr><td>Tag</td><td>A named, fixed pointer to one commit. Tags are used in these rules to mark the commit submitted for each stage</td></tr>
+          <tr><td>Branch</td><td>A named line of development inside a repository, used to work on changes separately before combining them</td></tr>
+          <tr><td>Fork</td><td>A copy of a repository made on Nurbly under another account, which keeps a link to the original and can be changed independently of it</td></tr>
+          <tr><td>Pull request</td><td>A request, made on Nurbly, for the owner of a repository to review and accept changes made in a fork or branch. The owner may merge it (accept it), decline it, or request changes</td></tr>
+          <tr><td>Merge</td><td>Accepting a pull request so that its changes become part of the original repository</td></tr>
+          <tr><td>Star</td><td>A mark that a Nurbly account holder places on a repository to show interest in it. Each account may star a repository once</td></tr>
+          <tr><td>Stage</td><td>One of the six monthly periods of the Challenge, each ending at a deadline and each judged separately</td></tr>
+          <tr><td>Stage deadline</td><td>The last Sunday of a stage's month at 23:59 UTC, as listed in section 3</td></tr>
+          <tr><td>Freeze</td><td>The moment of a stage deadline, at which the Organizer records each entry's tagged commit, star count, fork count and merged pull requests for judging</td></tr>
+          <tr><td>Remix</td><td>A fork of another team's entry, modified in Stage 6 for a new purpose and submitted back as a pull request, as section 3.6 describes</td></tr>
+          <tr><td>STEP</td><td>The ISO 10303 neutral file format for exchanging 3D CAD models between software, usually with the extension .step or .stp</td></tr>
+          <tr><td>Build guide</td><td>A written document in a repository that lets a reader manufacture and assemble the design without further information from the team</td></tr>
+          <tr><td>Thesis</td><td>The document committed in Stage 1 that states the drone's purpose and the requirements that follow from it, as section 3.2 describes</td></tr>
+          <tr><td>Bill of materials or BOM</td><td>A list of every part in a design, with quantity and, where the part is purchased, a source</td></tr>
+          <tr><td>Sponsor</td><td>A company or person that contributes a prize, product credit or money to the Challenge under a sponsorship agreement with the Organizer. A sponsor is not an organizer of the Challenge</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s1">
+    <h2>1. Organizer and eligibility</h2>
+    <p class="caps">No purchase or payment necessary to enter or win. Void where prohibited.</p>
+    <p id="r1-1"><b class="num">1.1</b> The Nurbly Build Challenge (the Challenge) is organized by Vagabond Ventures LLC, a Georgia, USA limited liability company that operates Nurbly (the Organizer). Notices to the Organizer are given by email to <a href="mailto:support@nurbly.com">support@nurbly.com</a>, as section 21 of the Nurbly Terms of Service provides. By registering, you accept these rules. These rules sit alongside the Nurbly Terms of Service at <a href="https://nurbly.com/terms">nurbly.com/terms</a>, which continue to govern your use of the Nurbly service. Where these rules and the Terms of Service conflict about the Challenge, these rules apply. On everything else, the Terms of Service apply.</p>
+    <p id="r1-2"><b class="num">1.2</b> The Challenge is open to individuals who are 18 years of age or older, or the age of majority in their place of residence if higher, at the time of registration.</p>
+    <p id="r1-3"><b class="num">1.3</b> The Challenge is not open to residents of any country, state or territory where it is prohibited by law, or to residents of countries subject to comprehensive United States sanctions. The Organizer may decline to pay a prize where payment would be unlawful.</p>
+    <p id="r1-4"><b class="num">1.4</b> The following may not enter: employees, contractors and officers of the Organizer, judges, employees of sponsors who have a role in judging, and the immediate family or household members of any of these.</p>
+    <p id="r1-5"><b class="num">1.5</b> A free Nurbly account is required to enter. Nurbly is free for public repositories at any team size. No paid plan is required to enter or win. The Nurbly service itself is open to users aged 13 and over under its Terms of Service. The Challenge is open only to those aged 18 and over under 1.2.</p>
+  </section>
+
+  <section id="s2">
+    <h2>2. How to enter</h2>
+    <p id="r2-1"><b class="num">2.1</b> Registration opens when these rules are published on the Challenge website and closes on 25 July 2027 at 23:59 UTC. Register by submitting the <a data-link="register" href="#">registration form</a>. One registration per team, submitted by the team lead.</p>
+    <p id="r2-2"><b class="num">2.2</b> Teams may be any size, including one person. Each person may belong to one team only. A person may change teams once during the Challenge by notifying the Organizer before the next stage deadline.</p>
+    <p id="r2-3"><b class="num">2.3</b> Each team must have one public repository on nurbly.com that contains the words <code>nbc-2027</code> in its name or description. This repository is the team's entry. Work hosted anywhere else is not judged.</p>
+    <p id="r2-4"><b class="num">2.4</b> Teams may register after Stage 1 has begun. A late team is eligible for the stage prizes of any stage it submits, and for the grand prize only if it submits Stages 4, 5 and 6.</p>
+    <p id="r2-5"><b class="num">2.5</b> Registration is free. Entrants are responsible for their own equipment, software, materials, internet access and any costs of building physical parts. No physical build is required.</p>
+  </section>
+
+  <section id="s3">
+    <h2>3. Schedule and submissions</h2>
+    <p id="r3-1"><b class="num">3.1</b> The Challenge runs in six monthly stages. Each stage closes on the last Sunday of its month at 23:59 UTC.</p>
+    <div class="card table-card">
+      <table class="plain">
+        <thead><tr><th>Stage</th><th>Subject</th><th>Deadline</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td data-label="Subject">Thesis and airframe</td><td data-label="Deadline">28 March 2027</td></tr>
+          <tr><td>2</td><td data-label="Subject">Electronics layout</td><td data-label="Deadline">25 April 2027</td></tr>
+          <tr><td>3</td><td data-label="Subject">Propulsion</td><td data-label="Deadline">30 May 2027</td></tr>
+          <tr><td>4</td><td data-label="Subject">Control and sensing</td><td data-label="Deadline">27 June 2027</td></tr>
+          <tr><td>5</td><td data-label="Subject">Integration</td><td data-label="Deadline">25 July 2027</td></tr>
+          <tr><td>6</td><td data-label="Subject">Release and remix</td><td data-label="Deadline">29 August 2027</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="r3-2"><b class="num">3.2</b> The product is a flying drone of any configuration, designed for a purpose the team chooses. In Stage 1 each team commits a thesis to its repository, a short document stating what the drone is for and the requirements that follow from that purpose, such as payload, range or endurance, size and operating environment. The purpose must be civilian and lawful. Later stages are judged partly on whether the work still serves the thesis. A team may revise its thesis at any time by committing the revised version with an explanation of what changed and why. A detailed brief for each stage is published on the Challenge website at least one month before that stage's deadline.</p>
+    <p id="r3-3"><b class="num">3.3</b> To submit a stage, the team creates a git tag named <code>stage-N</code> (for example <code>stage-3</code>) on its entry repository before the deadline. Judges review only the commit that tag points to. Work committed after the deadline is not considered for that stage, even if the tag is moved.</p>
+    <p id="r3-4"><b class="num">3.4</b> All models must be committed in STEP format. Native CAD files may be included but are not judged. Any CAD software may be used.</p>
+    <p id="r3-5"><b class="num">3.5</b> There is no minimum number of commits. Judges can see the full history of the repository and it informs the design process score.</p>
+    <p id="r3-6"><b class="num">3.6</b> In Stage 6 each team may fork any other team's entry, modify one subsystem for a new purpose, and open a pull request against the original repository. A team may remix only one entry for score, and two teams may not remix each other. A fork must credit the original repository in its README and may not be registered as a separate entry.</p>
+    <p id="r3-7"><b class="num">3.7</b> If nurbly.com is unavailable for more than four consecutive hours during the final 24 hours before a deadline, the Organizer will extend that deadline by 24 hours and announce the extension on the Challenge website.</p>
+    <p id="r3-8"><b class="num">3.8</b> Submissions must be the team's own work, or work the team has the right to use. Third-party components, libraries and open hardware designs may be used if their license permits it and the source is credited in the repository.</p>
+  </section>
+
+  <section id="s4">
+    <h2>4. Judging</h2>
+    <p id="r4-1"><b class="num">4.1</b> Each stage is scored out of 100. Stages 1 to 5 are scored as follows.</p>
+    <div class="card table-card">
+      <table class="plain">
+        <thead><tr><th>Criterion</th><th>Points</th><th>Basis</th></tr></thead>
+        <tbody>
+          <tr><td>Engineering quality</td><td data-label="Points" class="mono">35</td><td data-label="Basis">Fit, tolerancing, manufacturability, mass budget, interference</td></tr>
+          <tr><td>Design process</td><td data-label="Points" class="mono">20</td><td data-label="Basis">Branch use, pull request descriptions, decisions recorded in the repository, how the history reads</td></tr>
+          <tr><td>Integration with prior stages</td><td data-label="Points" class="mono">20</td><td data-label="Basis">Whether the stage's work mates with earlier stages, still serves the Stage 1 thesis, and whether earlier parts were revised when needed</td></tr>
+          <tr><td>Documentation</td><td data-label="Points" class="mono">15</td><td data-label="Basis">README, bill of materials, drawings, rationale</td></tr>
+          <tr><td>Community interest</td><td data-label="Points" class="mono">10</td><td data-label="Basis">Stars plus two times forks on the entry repository at the deadline, scored relative to all entries</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="r4-2"><b class="num">4.2</b> Stage 6 is scored as 40 points for the team's v1.0 release (build guide, bill of materials, drawings), 40 points for the remix pull request the team opens on another entry, and 20 points for how the team handles pull requests it receives, scored as a share of those received. A team that receives none is scored out of 80, on the first two parts only.</p>
+    <p id="r4-3"><b class="num">4.3</b> For community interest, only stars and forks from Nurbly accounts created before that stage's deadline are counted. The Organizer may discount stars or forks it reasonably believes were obtained through purchased, automated or fraudulent accounts.</p>
+    <p id="r4-4"><b class="num">4.4</b> Two bonuses are available in every stage in addition to the 100 points. A recruit bonus of up to 10 points, one point per merged pull request from a distinct Nurbly account outside the team that was created before the deadline, excluding accounts of other registered teams. A build bonus of up to 5 points for a physical part of that stage's subsystem at any scale, evidenced by a photograph committed to the repository before the tag showing the part beside the rendered model or a printed team identifier.</p>
+    <p id="r4-5"><b class="num">4.5</b> The 90 judged points in Stages 1 to 5, and all 100 in Stage 6, are awarded by at least two judges appointed by the Organizer. Where two judges' totals differ by more than 20 points a third judge scores the entry and the median is used. Judges' decisions are final.</p>
+    <p id="r4-6"><b class="num">4.6</b> The grand prize is awarded to the team with the highest total across all six stages including bonuses. Ties are broken by the higher Stage 6 score, then the higher engineering quality total across Stages 1 to 5.</p>
+    <p id="r4-7"><b class="num">4.7</b> Stage results are published on the Challenge website within 14 days of each deadline. Each team receives written feedback.</p>
+  </section>
+
+  <section id="s5">
+    <h2>5. Prizes</h2>
+    <p id="r5-1"><b class="num">5.1</b> Prizes are paid in United States dollars to the team lead, who is responsible for any division among team members.</p>
+    <div class="card table-card">
+      <table class="plain">
+        <thead><tr><th>Prize</th><th>Amount (USD)</th><th>Number</th></tr></thead>
+        <tbody>
+          <tr><td>Grand prize</td><td data-label="Amount (USD)" class="mono">1,500</td><td data-label="Number">1</td></tr>
+          <tr><td>Stage prize, highest score in each stage</td><td data-label="Amount (USD)" class="mono">250</td><td data-label="Number">6</td></tr>
+          <tr><td>Best design history</td><td data-label="Amount (USD)">Sponsor product, retail value to be announced</td><td data-label="Number">1</td></tr>
+          <tr><td>Best documentation</td><td data-label="Amount (USD)">Sponsor product, retail value to be announced</td><td data-label="Number">1</td></tr>
+          <tr><td>Best physical build, any scale, any stage</td><td data-label="Amount (USD)">Sponsor product, retail value to be announced</td><td data-label="Number">1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Total cash prizes 3,000 USD. Sponsor product prizes are announced on the Challenge website as sponsors confirm, and may be added or substituted with items of equal or greater value. Sponsors contribute prizes only. The Organizer alone runs, judges and administers the Challenge, and no sponsor is responsible for the Challenge, for these rules, for any decision made under them, or for anything an entrant builds or flies. A product prize carries only the warranty its manufacturer gives to any purchaser.</p>
+    <p id="r5-2"><b class="num">5.2</b> A team may win more than one stage prize and the grand prize. The three special awards are decided by a public vote on the Challenge website among Nurbly account holders, subject to the same account-age and fraud rules as community interest.</p>
+    <p id="r5-3"><b class="num">5.3</b> Winners are notified by email to the address on the registration form within 14 days of the relevant deadline. A winner must respond within 14 days and, where requested, sign an affidavit of eligibility and release. Failure to respond or to sign forfeits the prize, which may be awarded to the next highest scoring eligible team.</p>
+    <p id="r5-4"><b class="num">5.4</b> Cash prizes are paid by PayPal, Wise or bank transfer within 30 days of receipt of the signed affidavit and any required tax forms. The winner bears any receiving fees. The Organizer is not responsible for payment failures caused by incorrect details supplied by the winner.</p>
+    <p id="r5-5"><b class="num">5.5</b> All taxes on prizes are the winner's responsibility. United States persons receiving 600 USD or more in a calendar year must provide a completed IRS Form W-9 before payment and will receive a Form 1099. Non-US winners may be asked to provide a Form W-8BEN.</p>
+    <p id="r5-6"><b class="num">5.6</b> Prizes are not transferable and may not be substituted by the winner.</p>
+  </section>
+
+  <section id="s6">
+    <h2>6. Intellectual property</h2>
+    <p id="r6-1"><b class="num">6.1</b> Entrants keep all rights in their submissions. Nothing in these rules transfers ownership of any design to the Organizer or any sponsor, and entrants do not have to take any step to keep their rights. Copyright in a design arises automatically when it is created and stays with its author unless the author assigns it in writing, and nothing in these rules is such an assignment. The licenses in 6.2 and 6.4 are permissions to use, not transfers. Two cautions. Entering does not protect a design against copying by the public, because the entry repository is public and anyone may view and fork it under the Terms of Service. A team that wants to control reuse of its design outside Nurbly should add a license file to its repository, and a team that intends to seek a patent should take advice before publishing, because publication can start the clock on patent filing deadlines.</p>
+    <p id="r6-2"><b class="num">6.2</b> By entering, each team grants the Organizer a non-exclusive, worldwide, royalty-free license to display, reproduce and distribute the contents of its entry repository, renders generated from it, and the team name and team members' names, for the purposes of running, judging and promoting the Challenge and Nurbly, including through sponsors of the Challenge in their own marketing with credit to the team, during the Challenge and for three years after it ends. This is the written consent referred to in section 12 of the Nurbly Terms of Service, and it may be withdrawn for future uses by email to <a href="mailto:support@nurbly.com">support@nurbly.com</a> after the Challenge ends.</p>
+    <p id="r6-3"><b class="num">6.3</b> Entry repositories must remain public from registration until 30 days after final results are published. Because the repository is public, other entrants and members of the public may view, fork and build from it under whatever license the team applies to the repository. Teams are encouraged, not required, to apply an open hardware or open source license. A repository with no license file is treated by the Organizer as all rights reserved by the team, except for the license in 6.2 and the Stage 6 remix right in 6.4.</p>
+    <p id="r6-4"><b class="num">6.4</b> Section 6.4 of the Nurbly Terms of Service already grants every Nurbly user a license to view, clone and fork a public repository within the service. In addition, by entering, each team grants every other registered team a license to modify its entry repository in a fork during Stage 6 and to submit a pull request against it, for the purposes of the Challenge only. Rights in a remix belong to the remixing team, subject to the rights of the original team in the original work.</p>
+    <p id="r6-5"><b class="num">6.5</b> Each team warrants that its entry does not infringe any third party's intellectual property, that it has the right to grant the licenses above, and that it has permission from every team member for the use of their name. Each team will indemnify the Organizer against claims arising from a breach of this warranty.</p>
+    <p id="r6-6"><b class="num">6.6</b> Nurbly and the Nurbly logo are trademarks of the Organizer. Entrants may use them only to identify their participation in the Challenge.</p>
+  </section>
+
+  <section id="s7">
+    <h2>7. Conduct, safety and disqualification</h2>
+    <p id="r7-1"><b class="num">7.1</b> Entrants must follow the Nurbly Terms of Service, including its acceptable use section, and the Challenge <a href="#conduct">code of conduct</a> published with these rules. Harassment of other entrants, judges or staff in any channel results in disqualification.</p>
+    <p id="r7-1a"><b class="num">7.1a</b> <b>Export control.</b> Section 11 of the Nurbly Terms of Service applies to every entry. Entrants must not upload anything controlled under the International Traffic in Arms Regulations, anything controlled above EAR99 under the Export Administration Regulations, or anything intended for a military or restricted end use. Entries must be civilian hobby or commercial drone designs. Entrants are responsible for determining the export classification of their own designs.</p>
+    <p id="r7-2"><b class="num">7.2</b> Physical builds are optional. Any entrant who builds or flies a physical drone does so entirely at their own risk and is responsible for complying with all laws that apply to building, testing and flying unmanned aircraft where they are, including registration, airspace and weight rules. The Organizer does not review entries for airworthiness or safety and makes no representation that any design is safe to build or fly.</p>
+    <p id="r7-3"><b class="num">7.3</b> The Organizer may disqualify a team, without refund of anything and without awarding a prize, if the team: submits work it does not have the right to submit, obtains stars, forks or pull requests through fraud, automation or purchased accounts, moves a stage tag after the deadline, enters more than one team, misrepresents a team member's eligibility, or breaches these rules in any other material way.</p>
+    <p id="r7-4"><b class="num">7.4</b> The Organizer may remove any content from the Challenge website or from Challenge promotion at any time.</p>
+    <p id="r7-5"><b class="num">7.5</b> Decisions about disqualification are made by the Organizer, are final, and are not subject to appeal.</p>
+  </section>
+
+  <section id="s8">
+    <h2>8. General terms</h2>
+    <p id="r8-1"><b class="num">8.1</b> <b>Privacy.</b> Registration information is collected through a Google Forms registration form and held by the Organizer in Google Workspace, separately from your Nurbly account. It is used to run the Challenge, contact entrants, pay prizes and meet tax obligations, and is deleted within 12 months of final results except where tax law requires longer retention of winner records. Your Nurbly account and repository data remain governed by the Nurbly Privacy Policy at <a href="https://nurbly.com/privacy">nurbly.com/privacy</a>. By registering you agree to receive Challenge emails (stage briefs, deadlines, results) at the address you give. These are the only emails the Challenge sends, and you may unsubscribe at any time, but a team that cannot be contacted may forfeit a prize. Team names, team members' names and entry repositories are public. Email addresses are not published. Where a sponsor delivers a product prize directly, the Organizer gives that sponsor the winning team lead's name, email address and delivery address for that purpose only.</p>
+    <p id="r8-2"><b class="num">8.2</b> <b>Publicity.</b> Except where prohibited, winners agree to the use of their team name, members' names, country, entry and renders in Challenge and Nurbly promotion without further payment.</p>
+    <p id="r8-3"><b class="num">8.3</b> <b>Changes.</b> The Organizer may amend these rules, stage briefs, deadlines and prizes where reasonably necessary, including to correct errors, respond to platform outages, or comply with law. Changes are posted on the Challenge website and material changes are emailed to registered teams. No change reduces a prize already announced for a stage that has closed.</p>
+    <p id="r8-4"><b class="num">8.4</b> <b>Cancellation.</b> If the Challenge cannot run as planned for reasons outside the Organizer's reasonable control, including platform failure, legal action or insufficient participation, the Organizer may suspend, modify or cancel it. If the Challenge is cancelled after Stage 1 has closed, stage prizes already earned are paid and the grand prize is awarded on scores to the date of cancellation.</p>
+    <p id="r8-5"><b class="num">8.5</b> <b>Liability.</b> To the fullest extent permitted by law, the Organizer, its sponsors and judges are not liable for any loss, injury or damage arising from participation in the Challenge, from building or flying any design, or from the acceptance or use of any prize, and their total liability to any entrant is limited to the value of the prize at issue. Nothing limits liability that cannot be limited by law.</p>
+    <p id="r8-6"><b class="num">8.6</b> <b>Governing law.</b> These rules are governed by the laws of the State of Georgia, USA, without regard to its conflict of law rules, matching section 22 of the Nurbly Terms of Service. Any dispute is brought in the state or federal courts located in the State of Georgia, USA, and each entrant consents to that jurisdiction. Before starting proceedings, the party with a complaint must notify the other by email and the parties must try in good faith to resolve it for 30 days.</p>
+    <p id="r8-7"><b class="num">8.7</b> <b>Severability.</b> If any part of these rules is found unenforceable, the rest remains in effect.</p>
+    <p id="r8-8"><b class="num">8.8</b> <b>Contact.</b> Questions about these rules go to <a href="mailto:support@nurbly.com?subject=Build%20Challenge">support@nurbly.com</a> with Build Challenge in the subject line. A list of winners is available on the Challenge website for 90 days after final results, or by email on request.</p>
+  </section>
+
+  <section id="conduct">
+    <h2>Code of conduct</h2>
+    <p class="section-lead">Every entrant agrees to this under rule 7.1. It applies on Nurbly, in pull requests and reviews, by email, on any Challenge chat, and anywhere else you talk about the Challenge.</p>
+    <div class="card">
+      <ul class="checks checks-1">
+        <li><b>Be respectful.</b> Critique designs, not people. Disagree about engineering in good faith.</li>
+        <li><b>No harassment.</b> No threats, insults, slurs, unwanted sexual attention, or sharing anyone's private information.</li>
+        <li><b>Review kindly.</b> Pull requests and reviews should be useful to the team that receives them. Owners may decline any pull request, and declining is not an insult.</li>
+        <li><b>Play fair.</b> Don't use fake, bought or automated accounts for stars, forks, pull requests or votes, and don't open low-effort pull requests to collect bonuses.</li>
+        <li><b>Credit others.</b> Name the source of any design, component or code you build on.</li>
+        <li><b>Keep it civilian.</b> No weapons, no military designs, and nothing that breaks the export rules in 7.1a.</li>
+      </ul>
+    </div>
+    <p class="note">To report a problem, email <a href="mailto:support@nurbly.com?subject=Build%20Challenge%20conduct">support@nurbly.com</a> with Build Challenge conduct in the subject line. The Organizer may warn a team, remove content, or disqualify a team under 7.1 and 7.3.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer site-footer-slim">
+  <div class="wrap">
+    <a class="btn btn-primary btn-lg" data-link="register" href="#">Register your team</a>
+    <p class="footer-meta">
+      Contact <a data-link="email" href="#"></a>
+      <span class="dot"></span>
+      Run by <a href="https://nurbly.com">Nurbly</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -202,6 +202,7 @@ td:nth-child(2) { color: var(--muted); }
   td { border: 0; padding: 0.1rem 0; white-space: normal; }
   td:first-child { white-space: normal; }
   td:nth-child(2) { font-size: 0.85rem; }
+  td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); font-family: var(--sans); }
 }
 
 /* Judging weights with bars */
@@ -234,6 +235,7 @@ td:nth-child(2) { color: var(--muted); }
 }
 .amount { font-size: 1.5rem; font-weight: 700; margin-top: 0.4rem; }
 .card-grand .amount { font-size: 2rem; }
+.amount-sm { font-size: 1.15rem; color: var(--text-2); }
 .tbd {
   font-family: var(--mono);
   color: var(--warn);
@@ -335,6 +337,36 @@ details p { color: var(--text-2); margin-top: 0.6rem; }
   gap: 6px 12px;
 }
 .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border-bright); }
+.site-footer-slim { padding-top: 2.5rem; }
+.site-footer-slim .btn { margin-top: 0; }
+
+/* Rules page */
+.page-head {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse 80% 90% at 50% -20%, rgba(41, 82, 255, 0.18), transparent);
+}
+.page-head h1 { font-size: 2.2rem; line-height: 1.1; font-weight: 700; margin: 0.5rem 0 0.4rem; }
+.back { font-size: 0.9rem; }
+.back a { color: var(--muted); text-decoration: none; }
+.back a:hover { color: var(--text); }
+.toc { margin-top: 2rem; }
+.toc ol { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.3rem 1.5rem; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.rules section > p { color: var(--text-2); margin-bottom: 0.9rem; }
+.rules section > p b { color: var(--text); }
+.rules .num { font-family: var(--mono); font-weight: 500; color: var(--forge-300); margin-right: 0.4em; }
+.rules .caps { text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; color: var(--text); }
+.rules .table-card { margin: 0.25rem 0 1rem; }
+.rules section > .note { margin-top: 0; }
+.rules section > .section-lead { margin-top: -0.5rem; color: var(--muted); }
+section[id] { scroll-margin-top: 1rem; }
+/* Rules tables wrap and keep columns in normal weight, unlike the landing page's stages table */
+.rules td:first-child { white-space: normal; }
+.rules .defs td:first-child { width: 30%; }
+.rules .plain td:nth-child(2) { color: var(--text-2); }
+.checks.checks-1 { grid-template-columns: 1fr; }
 
 @media (min-width: 600px) {
   .hero { padding: 5.5rem 0 4.5rem; }
@@ -343,6 +375,7 @@ details p { color: var(--text-2); margin-top: 0.6rem; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .card-grand { grid-column: 1 / -1; }
   .checks { grid-template-columns: 1fr 1fr; }
+  .toc ol { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 860px) {

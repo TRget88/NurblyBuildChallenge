@@ -15,13 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
-  <script>
-    // Edit these links. Every element with a matching data-link attribute picks them up.
-    const REGISTER_URL = "https://forms.gle/REPLACE_ME";
-    const RULES_URL = "#rules";
-    const DISCORD_URL = ""; // Leave empty to hide the Discord mention.
-    const CONTACT_EMAIL = "support@nurbly.com";
-  </script>
+  <!-- The Register, rules, Discord and contact links are set in site.js. -->
+  <script src="site.js" defer></script>
 </head>
 <body>
 
@@ -54,40 +49,41 @@
 
   <section id="prizes">
     <h2>Prizes</h2>
-    <!-- EDIT: replace every TBD amount. -->
     <div class="grid grid-3">
       <div class="card card-grand">
         <p class="label">Grand prize</p>
-        <p class="amount"><span class="tbd">$TBD</span></p>
-        <p class="sub">Best complete drone across all six stages.</p>
+        <p class="amount">$1,500</p>
+        <p class="sub">Highest total across all six stages, bonuses included.</p>
       </div>
       <div class="card">
         <p class="label">Stage prizes</p>
-        <p class="amount"><span class="tbd">$TBD</span></p>
-        <p class="sub">For each of the six stages.</p>
+        <p class="amount">$250</p>
+        <p class="sub">Highest score in each of the six stages.</p>
       </div>
       <div class="card">
-        <p class="label">Best commit history</p>
-        <p class="amount"><span class="tbd">$TBD</span></p>
+        <p class="label">Best design history</p>
+        <p class="amount amount-sm">Sponsor prize</p>
       </div>
       <div class="card">
         <p class="label">Best documentation</p>
-        <p class="amount"><span class="tbd">$TBD</span></p>
+        <p class="amount amount-sm">Sponsor prize</p>
       </div>
       <div class="card">
         <p class="label">Best physical build</p>
-        <p class="amount"><span class="tbd">$TBD</span></p>
+        <p class="amount amount-sm">Sponsor prize</p>
       </div>
     </div>
+    <p class="note">$3,000 in cash prizes. The three sponsor prizes are decided by public vote, and are announced here as sponsors confirm.</p>
   </section>
 
   <section id="dates">
     <h2>Key dates</h2>
-    <!-- EDIT: placeholder dates. Stage deadlines fall on the last Sunday of each month. -->
+    <!-- Stage deadlines fall on the last Sunday of each month. Keep these in step with rules.html. -->
     <div class="grid grid-4">
       <div class="card">
-        <p class="label">Registration opens</p>
-        <p class="value">1 Dec 2026</p>
+        <p class="label">Registration</p>
+        <p class="value">Open now</p>
+        <p class="sub">Closes 25 Jul 2027</p>
       </div>
       <div class="card">
         <p class="label">Stage 1 opens</p>
@@ -130,12 +126,12 @@
           <tr><th>Stage</th><th>Month</th><th>Deliverable</th></tr>
         </thead>
         <tbody>
-          <tr><td><span class="tag mono">stage-1</span> Airframe</td><td>Mar</td><td>Arms, body, landing gear and motor mounts as STEP. Printable or machinable.</td></tr>
+          <tr><td><span class="tag mono">stage-1</span> Thesis and airframe</td><td>Mar</td><td>A thesis stating what the drone is for and the requirements that follow. Arms, body, landing gear and motor mounts as STEP. Printable or machinable.</td></tr>
           <tr><td><span class="tag mono">stage-2</span> Electronics layout</td><td>Apr</td><td>Flight controller, ESC and battery mounts, cable routing. PCB outline if custom.</td></tr>
           <tr><td><span class="tag mono">stage-3</span> Propulsion</td><td>May</td><td>Motor selection and prop guards. Thrust math documented in the repo.</td></tr>
           <tr><td><span class="tag mono">stage-4</span> Control and sensing</td><td>Jun</td><td>FC mount, camera or sensor gimbal, antenna placement.</td></tr>
           <tr><td><span class="tag mono">stage-5</span> Integration</td><td>Jul</td><td>Full assembly, interference check, mass budget, BOM.</td></tr>
-          <tr><td><span class="tag mono">stage-6</span> Final</td><td>Aug</td><td>Documented build, optional physical build photos, release tag.</td></tr>
+          <tr><td><span class="tag mono">stage-6</span> Release and remix</td><td>Aug</td><td>A v1.0 release with build guide, BOM and drawings. Fork another team's entry, remix one subsystem, and open a pull request.</td></tr>
         </tbody>
       </table>
     </div>
@@ -145,25 +141,29 @@
     <h2>How it is judged</h2>
     <div class="card">
       <ul class="weights">
-        <li><span>Engineering quality</span><strong>35%</strong><i style="--w:35%"></i></li>
-        <li><span>Design process</span><strong>25%</strong><i style="--w:25%"></i></li>
-        <li><span>Integration with prior stages</span><strong>20%</strong><i style="--w:20%"></i></li>
-        <li><span>Documentation</span><strong>15%</strong><i style="--w:15%"></i></li>
-        <li><span>Presentation</span><strong>5%</strong><i style="--w:5%"></i></li>
+        <li><span>Engineering quality</span><strong>35</strong><i style="--w:35%"></i></li>
+        <li><span>Design process</span><strong>20</strong><i style="--w:20%"></i></li>
+        <li><span>Integration with prior stages</span><strong>20</strong><i style="--w:20%"></i></li>
+        <li><span>Documentation</span><strong>15</strong><i style="--w:15%"></i></li>
+        <li><span>Community interest</span><strong>10</strong><i style="--w:10%"></i></li>
       </ul>
     </div>
-    <p class="note">Commit history is judged, so a single deadline-day commit scores below a month of small commits.</p>
+    <p class="note">Stages 1 to 5 are scored out of 100 as above. Stage 6 scores your release (40), your remix of
+    another team's entry (40), and how you handle pull requests you receive (20). Every stage also offers
+    up to 10 bonus points for merged pull requests from outside contributors, and up to 5 for a physical part.</p>
+    <p class="note">There is no minimum commit count, but judges read your whole history, so a single deadline-day
+    commit scores below a month of small commits.</p>
   </section>
 
   <section id="rules">
     <h2>Rules summary</h2>
     <div class="card">
       <ul class="checks">
-        <li>One public Nurbly repo per team, tagged <code>nbc-2027</code>.</li>
-        <li>All models as STEP.</li>
-        <li>Tag each stage <code>stage-N</code>.</li>
-        <li>At least 10 commits per stage.</li>
-        <li>Any CAD tool.</li>
+        <li>One public Nurbly repo per team, with <code>nbc-2027</code> in its name or description.</li>
+        <li>All models as STEP, from any CAD tool.</li>
+        <li>Tag each stage <code>stage-N</code> before the deadline.</li>
+        <li>Start with a thesis: what your drone is for.</li>
+        <li>Civilian, lawful designs only.</li>
         <li>Late joiners welcome from any stage.</li>
         <li>Participants keep their IP.</li>
         <li>You must be 18 or older.</li>
@@ -177,7 +177,8 @@
     <div class="faq">
       <details>
         <summary>Do I need to build the drone physically?</summary>
-        <p>No. A physical build is optional. It only earns a bonus in stage 6.</p>
+        <p>No. A physical build is optional. Each stage offers a bonus of up to 5 points for a photo of
+        a physical part of that stage's subsystem, at any scale.</p>
       </details>
       <details>
         <summary>What CAD tool do I need?</summary>
@@ -203,7 +204,8 @@
       </details>
       <details>
         <summary>Can I join late?</summary>
-        <p>Yes. You can join from any stage.</p>
+        <p>Yes. You can join from any stage until registration closes on 25 Jul 2027. A late team can win
+        the stage prize for any stage it submits, and the grand prize if it submits stages 4, 5 and 6.</p>
       </details>
       <details>
         <summary>Where do I ask questions?</summary>
@@ -229,12 +231,5 @@
   </div>
 </footer>
 
-<script>
-  const links = { register: REGISTER_URL, rules: RULES_URL, discord: DISCORD_URL, email: "mailto:" + CONTACT_EMAIL,
-    sponsor: "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("Sponsoring the Nurbly Build Challenge") };
-  document.querySelectorAll("[data-link]").forEach(a => { a.href = links[a.dataset.link]; });
-  document.querySelectorAll('[data-link="email"]').forEach(a => { a.textContent = CONTACT_EMAIL; });
-  if (!DISCORD_URL) document.querySelectorAll('[data-needs="discord"]').forEach(el => el.remove());
-</script>
 </body>
 </html>
