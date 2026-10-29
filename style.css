@@ -159,6 +159,8 @@ code {
 }
 .value { font-size: 1.15rem; font-weight: 700; margin-top: 0.35rem; }
 .sub { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+.copy { color: var(--text-2); margin-top: 0.4rem; }
+.lead-2 { margin-top: 1rem; }
 
 /* Stages table */
 .table-card { padding: 0; overflow: hidden; }
@@ -380,6 +382,7 @@ section[id] { scroll-margin-top: 1rem; }
 @media (min-width: 860px) {
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(4, 1fr); }
+  .grid-thirds { grid-template-columns: repeat(3, 1fr); }
   /* Cash prizes share the first row; the four sponsor prizes fill the second */
   .card-cash { grid-column: span 2; }
 }
